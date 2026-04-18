@@ -163,16 +163,27 @@ a:hover {
 }
 
 .lang-btn {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  padding: 0.35rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28rem 0.4rem;
+  min-width: 2.1rem;
+  height: 1.85rem;
   border: 1px solid rgba(47, 61, 40, 0.2);
   border-radius: 6px;
   background: transparent;
   color: var(--forest-soft);
   cursor: pointer;
   font-family: var(--font-body);
+  line-height: 0;
+}
+
+.lang-btn__flag {
+  width: 1.45rem;
+  height: 0.97rem;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(30, 38, 24, 0.12);
 }
 
 .lang-btn:hover,
@@ -180,6 +191,11 @@ a:hover {
   background: var(--forest);
   color: var(--mist);
   border-color: var(--forest);
+}
+
+.lang-btn:hover .lang-btn__flag,
+.lang-btn.is-active .lang-btn__flag {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
 
 /* Hero */
@@ -848,15 +864,16 @@ a:hover {
 .buzios-band__overlay {
   position: absolute;
   inset: -12%;
+  /* Playa Búzios — caracol al atardecer (misma gama que el carrusel, no interiores) */
   background-image: linear-gradient(
-      120deg,
-      rgba(30, 38, 24, 0.78) 0%,
-      rgba(30, 38, 24, 0.5) 55%,
-      rgba(30, 38, 24, 0.35) 100%
+      165deg,
+      rgba(30, 38, 24, 0.82) 0%,
+      rgba(30, 38, 24, 0.52) 42%,
+      rgba(30, 38, 24, 0.38) 100%
     ),
-    url("../assets/buzios-banner-mdb.png");
+    url("../assets/moment-shell.png");
   background-size: auto, cover;
-  background-position: center, center 42%;
+  background-position: center, center 36%;
   background-repeat: no-repeat;
   will-change: transform;
   z-index: 1;
